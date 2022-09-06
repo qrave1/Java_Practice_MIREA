@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9cd517c-6c44-4d62-bb48-9aada18d3a50" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Second_practice/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Second_practice/TestDog.java" afterDir="false" />
+    <list default="true" id="f9cd517c-6c44-4d62-bb48-9aada18d3a50" name="Changes" comment="Dog">
+      <change beforePath="$PROJECT_DIR$/src/Second_practice/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Second_practice/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Second_practice/TestShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Second_practice/TestShop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestDog">
+  <component name="RunManager" selected="Application.TestShop">
     <configuration name="TestDog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Second_practice.TestDog" />
       <module name="Practice" />
@@ -111,8 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestDog" />
         <item itemvalue="Application.TestShop" />
+        <item itemvalue="Application.TestDog" />
         <item itemvalue="Application.five" />
         <item itemvalue="Application.third" />
         <item itemvalue="Application.first" />
@@ -135,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662377941506</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dog">
+      <created>1662489056348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662489056348</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Dog">
+      <created>1662489165583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662489165583</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +174,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Dog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dog" />
   </component>
 </project>
