@@ -1,0 +1,41 @@
+Index: src/Second_practice/TestShop.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Second_practice;\r\nimport java.util.Scanner;\r\n\r\npublic class TestShop {\r\n    public static void main(String[] args) {\r\n        int k = 0;\r\n        Scanner sc = new Scanner(System.in);\r\n        Shop DNS = new Shop(\"Проспект Вернадского 78\");\r\n        System.out.println(\"Fill the storage\\n\");\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Second_practice/TestShop.java b/src/Second_practice/TestShop.java
+--- a/src/Second_practice/TestShop.java	(revision 487cace334431fb7f3ebd7e675bd440c802a31ef)
++++ b/src/Second_practice/TestShop.java	(date 1662488245743)
+@@ -3,9 +3,28 @@
+ 
+ public class TestShop {
+     public static void main(String[] args) {
+-        int k = 0;
+         Scanner sc = new Scanner(System.in);
+         Shop DNS = new Shop("Проспект Вернадского 78");
+-        System.out.println("Fill the storage\n");
++        System.out.println("Enter the number of computers");
++        int compNumber = sc.nextInt();
++        int tempId;
++        String tempCPU, tempGPU, tempMEM;
++        for(int i=0; i < compNumber; i++){
++            System.out.println("Enter the ID");
++            tempId = sc.nextInt();
++            sc.nextLine();
++            System.out.println("Enter the CPU");
++            tempCPU = sc.nextLine();
++            System.out.println("Enter the GPU");
++            tempGPU = sc.nextLine();
++            System.out.println("Enter the MEM");
++            tempMEM = sc.nextLine();
++            DNS.storage[i] = new Computer(tempId, tempCPU, tempGPU, tempMEM);
++            if(i+1!=compNumber)
++                System.out.println("\nNext computer\n");
++            else
++                System.out.println("The end of filling :)");
++        }
++        DNS.search(15);
+     }
+ }

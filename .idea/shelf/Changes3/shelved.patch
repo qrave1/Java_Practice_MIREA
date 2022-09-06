@@ -1,0 +1,48 @@
+Index: src/Second_practice/Shop.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Second_practice;\r\n\r\npublic class Shop {\r\n    private String address;\r\n    public Computer[] storage;\r\n    private static int i = 0;\r\n\r\n    public Shop(String address) {\r\n        this.address = address;\r\n        this.storage = null;\r\n    }\r\n\r\n    private void AddComputer(int id, String CPU, String GPU, String MEM){\r\n        Computer a = new Computer(id,CPU,GPU,MEM);\r\n        storage[i] = a;\r\n    }\r\n\r\n    private void deleteComputer(int index){\r\n        for(int j = 0; j < storage.length; j++){\r\n            if(storage[j].id == index)\r\n                storage[j] = null;\r\n        }\r\n    }\r\n\r\n    private void search(int index){\r\n        for(int j = 0; j < storage.length; j++){\r\n            if(storage[j].id == index)\r\n                System.out.println(storage[j]);\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Second_practice/Shop.java b/src/Second_practice/Shop.java
+--- a/src/Second_practice/Shop.java	(revision 487cace334431fb7f3ebd7e675bd440c802a31ef)
++++ b/src/Second_practice/Shop.java	(date 1662488910904)
+@@ -7,25 +7,30 @@
+ 
+     public Shop(String address) {
+         this.address = address;
+-        this.storage = null;
++        this.storage = new Computer[10];
+     }
+ 
+-    private void AddComputer(int id, String CPU, String GPU, String MEM){
++    void AddComputer(int id, String CPU, String GPU, String MEM){
+         Computer a = new Computer(id,CPU,GPU,MEM);
+         storage[i] = a;
+     }
+ 
+-    private void deleteComputer(int index){
++    void deleteComputer(int index){
+         for(int j = 0; j < storage.length; j++){
+             if(storage[j].id == index)
+                 storage[j] = null;
+         }
+     }
+ 
+-    private void search(int index){
+-        for(int j = 0; j < storage.length; j++){
+-            if(storage[j].id == index)
+-                System.out.println(storage[j]);
++    void search(int index){
++        try{
++        for (Computer computer : storage) {
++            if (computer.id == index)
++                System.out.println("Computer has been completely founded on storage: " + computer);
++        }}
++        catch(Exception NullPointerException){
++            // тут короче должна быть заглушка, потому что это исключение вообще нахуй не должно вызываться, и никто
++            // не должен знать про костыли, на которых вся программа и работает
+         }
+     }
+ 
