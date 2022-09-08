@@ -1,37 +1,42 @@
 package Second_practice;
 
+import java.util.ArrayList;
+
 public class Shop {
     private String address;
-    public Computer[] storage;
+    public ArrayList<Computer> storage;
     private static int i = 0;
 
     public Shop(String address) {
         this.address = address;
-        this.storage = new Computer[10];
     }
 
     void AddComputer(int id, String CPU, String GPU, String MEM){
         Computer a = new Computer(id,CPU,GPU,MEM);
-        storage[i] = a;
+        storage.add(i, a);
+        i++;
     }
 
     void deleteComputer(int index){
-        for(int j = 0; j < storage.length; j++){
-            if(storage[j].id == index)
-                storage[j] = null;
+        for(int j = 0; j < storage.size(); j++){
+            if(storage.get(j).id == index){
+                storage.remove(j);
+                break;
+            }
         }
+        System.out.println("Object has been deleted from base");
     }
 
     void search(int index){
-        try{
-        for (Computer computer : storage) {
-            if (computer.id == index)
-                System.out.println("Computer has been completely founded on storage: " + computer);
-        }}
-        catch(Exception NullPointerException){
-            // тут короче должна быть заглушка, потому что это исключение вообще нахуй не должно вызываться, и никто
-            // не должен знать про костыли, на которых вся программа и работает
+        for(int j = 0; j < storage.size(); j++){
+            if(storage.get(j).id == index){
+                System.out.println("Computer has been found in base");
+                break;
+            }
+            else {
+                System.out.println("Computer is missing in base");
+                break;
+            }
         }
     }
-
 }
