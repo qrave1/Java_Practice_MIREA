@@ -9,6 +9,6 @@ public class HowMany {
         Scanner sc = new Scanner(System.in);
         word = sc.nextLine();
         line = word.split("[\\p{Punct}\\s]+");
-        System.out.println(line.length + "words");
+        System.out.println(line.length + " words");
     }
 }
