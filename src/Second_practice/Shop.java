@@ -4,20 +4,19 @@ import java.util.ArrayList;
 
 public class Shop {
     private String address;
-    public ArrayList<Computer> storage;
-    private static int i = 0;
+    public ArrayList<Computer> storage = new ArrayList<>();
 
     public Shop(String address) {
         this.address = address;
     }
 
-    void AddComputer(int id, String CPU, String GPU, String MEM){
+    void setArr(ArrayList<Computer> list) {this.storage = list;}
+    void AddComputer(int index,int id, String CPU, String GPU, String MEM){
         Computer a = new Computer(id,CPU,GPU,MEM);
-        storage.add(i, a);
-        i++;
+        storage.add(index, a);
     }
 
-    void deleteComputer(int index){
+    public void deleteComputer(int index){
         for(int j = 0; j < storage.size(); j++){
             if(storage.get(j).id == index){
                 storage.remove(j);
@@ -27,15 +26,15 @@ public class Shop {
         System.out.println("Object has been deleted from base");
     }
 
-    void search(int index){
-        for(int j = 0; j < storage.size(); j++){
+
+
+    public void find(int index){
+        for (int j = 0; j < storage.size(); j++) {
             if(storage.get(j).id == index){
-                System.out.println("Computer has been found in base");
-                break;
+                System.out.println(storage.get(j).toString());
             }
-            else {
-                System.out.println("Computer is missing in base");
-                break;
+            else{
+                System.out.println("Computer wasn't found in base");
             }
         }
     }

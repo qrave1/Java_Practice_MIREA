@@ -13,5 +13,12 @@ public class Computer {
         this.MEM = MEM;
     }
 
-
+    public String toString() {
+        return "Computer{" +
+                "id=" + id +
+                ", CPU='" + CPU + '\'' +
+                ", GPU='" + GPU + '\'' +
+                ", MEM='" + MEM + '\'' +
+                '}';
+    }
 }
