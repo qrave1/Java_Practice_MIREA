@@ -40,16 +40,18 @@ public class CircleTest {
         return min;
     }
 
+    public String toString() {
+        return "CircleTest{" +
+                "list=" + list +
+                ", numberOfElem=" + numberOfElem +
+                '}';
+    }
+
     public CircleTest SortedList() {
         for (int i = 0; i < this.list.size(); i++) {
             for (int j = 1; j < this.list.size(); j++) {
                 if(this.list.get(i).getR() > this.list.get(j).getR()) {
-                    Point temp1 = new Point(0,0);
-                    Circle temp = new Circle(temp1);
-                    temp = this.list.get(j);
-//                    this.list.get(j) = this.list.get(i);
-//                    this.list.get(i) = temp;
-                    // TODO: Сделать сортировку по радиусу
+                    Collections.swap(this.list, i, j);
                 }
             }
         }
