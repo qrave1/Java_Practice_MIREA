@@ -14,7 +14,8 @@ public class Report {
     public void generateReport() {
         for (Employee emp : list) {
             String temp = emp.toString();
-            System.out.printf("%15s%n", temp); //TODO: СДЕЛАТЬ ВЫРАВНИВАНИЕ ПО ПРАВОМУ КРАЮ
+            System.out.format("%5d%n", temp);
+
         }
     }
 }
