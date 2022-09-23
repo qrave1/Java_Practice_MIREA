@@ -14,7 +14,7 @@ public class Report {
     public void generateReport() {
         for (Employee emp : list) {
             String temp = emp.toString();
-            System.out.format("%225s%n", temp);
+            System.out.format("%5s%n", temp);
 
         }
     }

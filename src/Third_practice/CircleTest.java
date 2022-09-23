@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class CircleTest {
-    ArrayList<Circle> list = new ArrayList<>();
+    ArrayList<Circle> list;
     private int numberOfElem;
 
     public CircleTest(ArrayList<Circle> list) {
@@ -17,24 +17,23 @@ public class CircleTest {
         return numberOfElem;
     }
 
-    public Circle findMax() {
-        Point temp = new Point(0,0);
-        Circle max = new Circle(temp, 0);
+    public int findMax() {
+        int max = 0;
         for (int i = 0; i < this.list.size(); i++) {
             for (int j = 1; j < this.list.size(); j++) {
-                if(this.list.get(i).getR() > this.list.get(j).getR())
-                    max = this.list.get(i);
+                if (this.list.get(i).getR() > this.list.get(j).getR()) {
+                    max = this.list.get(i).getR();
+                }
             }
         }
         return max;
     }
-    public Circle findMin() {
-        Point temp = new Point(0,0);
-        Circle min = new Circle(temp, 1000);
-        for (int i = 0; i < this.list.size(); i++) {
-            for (int j = 1; j < this.list.size(); j++) {
-                if(this.list.get(i).getR() > this.list.get(j).getR())
-                    min = this.list.get(j);
+    public int findMin() {
+        int min = 1000;
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 1; j < list.size(); j++) {
+                if(list.get(i).getR() > list.get(j).getR())
+                    min = list.get(j).getR();
             }
         }
         return min;

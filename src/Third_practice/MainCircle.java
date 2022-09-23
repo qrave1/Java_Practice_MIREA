@@ -19,8 +19,8 @@ public class MainCircle {
         System.out.println(tempList);
         CircleTest obj = new CircleTest(tempList);
         obj.getNumberOfElem();
-        System.out.println(obj.findMax());
-        System.out.println(obj.findMin());
+        System.out.println("Max radius = " + obj.findMax());
+        System.out.println("Min radius = " + obj.findMin());
         System.out.println(obj.SortedList());
     }
 }
