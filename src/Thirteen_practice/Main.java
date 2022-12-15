@@ -7,7 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         StringBuilder stringBuilder = new StringBuilder();
         Methods test = new Methods();
-        test.firstTask("I like Java!!!");
+        test.firstTask("I like Java!!");
         System.out.println('\n');
         //Задание 2
         for (String fio : sc.nextLine().split(" ")) {//Считываем, пока не нажмём enter
@@ -39,8 +39,7 @@ public class Main {
             System.out.println(shirt[i].toString() + '\n');
         }
         //Задание 5
-        /*String string = new String();
-        string = sc.nextLine();*/
+
         test.fifthTask("+79187975114");
         test.fifthTask("+101237561264");
         test.fifthTask("89187975114");

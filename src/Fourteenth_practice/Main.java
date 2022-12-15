@@ -38,7 +38,7 @@ public class Main {
 
         //Задание 2
         System.out.println("Enter the line:");
-        Pattern pattern2 = Pattern.compile("abcdefghijklmnopqrstuv18340");
+        Pattern pattern2 = Pattern.compile("\\w+\\+");
         Matcher matcher2 = pattern2.matcher(sc.nextLine());
         if (matcher2.matches())
             System.out.println("string matches pattern");
@@ -71,7 +71,7 @@ public class Main {
         System.out.println(matches);
         System.out.println();
         //Задание 5
-        System.out.println(checkString("29/02/2000"));
+        System.out.println(checkString("29/02/2004"));
         System.out.println(checkString("30/04/2003"));
         System.out.println(checkString("01/01/2003"));
         System.out.println(checkString("29/02/2001"));

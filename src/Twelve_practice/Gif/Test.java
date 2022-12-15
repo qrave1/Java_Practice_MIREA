@@ -18,7 +18,7 @@ public class Test {
 
         while (true){
             for (int i = 0; i <= 47; i++) {
-                img.setIcon(new ImageIcon("C:\\Users\\livea\\IdeaProjects\\Java_Practice_MIREA\\src\\Twelve_practice\\Gif3\\frame_"+i+"_delay-0.03s.gif"));
+                img.setIcon(new ImageIcon("C:\\Users\\livea\\IdeaProjects\\Java_Practice_MIREA\\src\\Twelve_practice\\Gif\\frame_"+i+"_delay-0.03s.gif"));
                 Thread.sleep(30);
             }
         }

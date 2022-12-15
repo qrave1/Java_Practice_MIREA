@@ -43,7 +43,10 @@ public class FirstTask {
         System.out.println("1 - only year, 2 - years, month and day, 3 - date and time");
         int num = sc.nextInt();
         student.print(num);
+
+
         //5 Задание
+        System.out.println();
         ArrayList arrayList = new ArrayList<>();
         LinkedList linkedList = new LinkedList();
         long start = System.nanoTime();
@@ -51,31 +54,57 @@ public class FirstTask {
         for (int i = 0; i < 10000; i++) {
             arrayList.add(i);
         }
-        //Вставка по индексу
-        arrayList.add(5,12);
-        //Удаление по индексу
-        arrayList.remove(3);
-        //Поиск по индексу
-        arrayList.get(8);
-        arrayList.toArray();
         long finish = System.nanoTime();
         long elapsed = finish - start;
-        System.out.println("(ArrayList) ms: " + elapsed / 100000);
+        System.out.println("(ArrayList)(Filling) ms: " + elapsed / 100000);
+        //Вставка по индексу
+        start = System.nanoTime();
+        arrayList.add(5,12);
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(ArrayList)(Adding) ms: " + elapsed / 100000);
+        //Удаление по индексу
+        start = System.nanoTime();
+        arrayList.remove(7542);
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(ArrayList)(Remove) ms: " + elapsed / 100000);
+        //Поиск по индексу
+        start = System.nanoTime();
+        arrayList.get(9999);
+        arrayList.toArray();
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(ArrayList)(Find) ms: " + elapsed / 100000);
 
-        long startList = System.nanoTime();
+        System.out.println("\n");
+
         //Заполнение
+        start = System.nanoTime();
         for (int i = 0; i < 10000; i++) {
             linkedList.add(i);
         }
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(Linked list)(Filling) ms: " + elapsed / 100000);
         //Вставка по индексу
-        linkedList.add(5,12);
+        start = System.nanoTime();
+        linkedList.add(6432,12);
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(Linked list)(Add) ms: " + elapsed / 100000);
         //Удаление по индексу
-        linkedList.remove(3);
+        start = System.nanoTime();
+        linkedList.remove(7654);
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(Linked list)(Remove) ms: " + elapsed / 100000);
         //Поиск по индексу
-        linkedList.get(8);
+        start = System.nanoTime();
+        linkedList.get(9999);
         linkedList.toArray();
-        long finishList = System.nanoTime();
-        long elapsedList = finishList - startList;
-        System.out.println("(Linked list) ms: " + elapsedList / 100000);
+        finish = System.nanoTime();
+        elapsed = finish - start;
+        System.out.println("(Linked list)(Find) ms: " + elapsed / 100000);
     }
 }
