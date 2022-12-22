@@ -18,7 +18,7 @@ public class task3 {
     }
 
     public static void main(String[] args) {
-        String[] s = {"Hello", "Danil"};
+        String[] s = {"Hello", "World"};
         sid("String", s);
 
         Integer[] i = {1,2,3,4};

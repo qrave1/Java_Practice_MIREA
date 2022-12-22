@@ -8,9 +8,9 @@ public class HashTab<T, V> {
 
         HashMap<Integer, String> passportsAndNames = new HashMap<>();
 
-        passportsAndNames.put(212133, "Лидия Аркадьевна Бубликова");
-        passportsAndNames.put(162348, "Иван Михайлович Серебряков");
-        passportsAndNames.put(8082771, "Дональд Джон Трамп");
+        passportsAndNames.put(212133, "Косматов Александр Юрьевич");
+        passportsAndNames.put(162348, "Смирнов Артём Евгеньевич");
+        passportsAndNames.put(8082771, "Карпов Дмитрий Анатольевич");
 
         String lidiaName = passportsAndNames.get(212133);
         System.out.println(lidiaName);

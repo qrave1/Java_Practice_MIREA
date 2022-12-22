@@ -28,7 +28,7 @@ public class RandomNumber implements ActionListener {
         frame.add(panel);
         panel.setLayout(null);
 
-        text = new JLabel("Р’РІРµРґРё С‡РёСЃР»Рѕ(РѕС‚ 0 - 20) РєРѕС‚РѕСЂРѕРµ СЏ Р·Р°РіР°РґР°Р»(РЈ  РІР°СЃ 3 РїРѕРїС‹С‚РєРё!!!!!)");
+        text = new JLabel("Введи число(от 0 - 20) которое я загадал(У  вас 3 попытки!!!!!)");
         text.setBounds(10,-30,600,100);
         panel.add(text);
 
@@ -61,12 +61,12 @@ public class RandomNumber implements ActionListener {
     }
 
     public void loseGame(){
-        showMessageDialog(null, "РўС‹ РїСЂРѕРёРіСЂР°Р»");
+        showMessageDialog(null, "Ты проиграл");
         System.exit(0);
     }
 
     public void winGame(){
-        showMessageDialog(null, "РЈСЂР° С‚С‹ РІС‹РёРіСЂР°Р»");
+        showMessageDialog(null, "Ура ты выиграл");
         System.exit(0);
     }
 
@@ -79,35 +79,35 @@ public class RandomNumber implements ActionListener {
             try{
                 int num = Integer.parseInt(number.getText());
                 if(num == rndNum) {
-                    message += "Р’С‹ СѓРіР°РґР°Р»Рё";
+                    message += "Вы угадали";
                     correct.setText(message);
                     winGame();
                 }
                 else if (num < rndNum) {
-                    message += "Р’Р°С€Рµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ";
+                    message += "Ваше число меньше загаданного";
 
 
                 }
                 else {
-                    message += "Р’Р°С€Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ";
+                    message += "Ваше число больше загаданного";
 
                 }
                 chance--;
 
 
             }catch (Exception ex){
-                message = "РџСѓСЃС‚РѕРµ РїРѕР»Рµ СЌС‚Рѕ РЅРµ С‡РёСЃР»Рѕ! Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ РѕС‚ 0 РґРѕ 20.";
+                message = "Пустое поле это не число! Введите целое число от 0 до 20.";
             }
             finally {
                 correct.setText(message);
-                counter.setText("РЈ С‚РµР±СЏ РѕСЃС‚Р°Р»РѕСЃСЊ РїРѕРїС‹С‚РѕРє: " + chance);
+                counter.setText("У тебя осталось попыток: " + chance);
             }
 
 
         }
         else{
             chance--;
-            counter.setText("РЈ С‚РµР±СЏ РѕС‚СЃР°Р»РѕСЃСЊ РїРѕРїС‹С‚РѕРє: " + chance);
+            counter.setText("У тебя отсалось попыток: " + chance);
             loseGame();
         }
 

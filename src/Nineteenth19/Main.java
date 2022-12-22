@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Student> s = new ArrayList<>();
-        s.add(new Student("–§–ò–û1", 67, 12, 18));
-        s.add(new Student("–§–ò–û2", 57, 23, 18));
-        s.add(new Student("–§–ò–û3", 93, 42, 19));
-        s.add(new Student("–§–ò–û4", 24, 2, 18));
-        s.add(new Student("–§–ò–û5", 66, 16, 18));
+        s.add(new Student("‘»Œ1", 67, 12, 18));
+        s.add(new Student("‘»Œ2", 57, 23, 18));
+        s.add(new Student("‘»Œ3", 93, 42, 19));
+        s.add(new Student("‘»Œ4", 24, 2, 18));
+        s.add(new Student("‘»Œ5", 66, 16, 18));
 
         new LabClassUI(s);
     }

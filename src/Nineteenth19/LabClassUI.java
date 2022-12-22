@@ -23,9 +23,9 @@ public class LabClassUI extends JFrame {
         this.students = students;
 
         JPanel panel = new JPanel(new FlowLayout());
-        JButton addStudentBtn = new JButton("Р”РѕР±Р°РІРёС‚СЊ СЃС‚СѓРґРµРЅС‚Р°");
-        JButton remStudentBtn = new JButton("РЈРґР°Р»РёС‚СЊ СЃС‚СѓРґРµРЅС‚Р°");
-        JButton findStudentBtn = new JButton("РќР°Р№С‚Рё СЃС‚СѓРґРµРЅС‚Р°");
+        JButton addStudentBtn = new JButton("Добавить студента");
+        JButton remStudentBtn = new JButton("Удалить студента");
+        JButton findStudentBtn = new JButton("Найти студента");
 
         panel.add(addStudentBtn);
         panel.add(remStudentBtn);
@@ -172,7 +172,7 @@ public class LabClassUI extends JFrame {
     private void remBtnClicked() {
         int c = studentTable.getSelectedRowCount();
         if(c != 1) {
-            JOptionPane.showMessageDialog(this, "Р’С‹Р±РµСЂРµС‚Рµ СЂРѕРІРЅРѕ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ!");
+            JOptionPane.showMessageDialog(this, "Выберете ровно одну строку!");
             return;
         }
         c = studentTable.getSelectedRow();
@@ -198,7 +198,7 @@ public class LabClassUI extends JFrame {
             groupI = Integer.parseInt(group);
             ageI = Integer.parseInt(age);
         }catch (NumberFormatException e){
-            throw new NumberFormatException("РќРµРІРѕР·РјРѕР¶РЅРѕ СЃС‚СЂРѕРєСѓ "+e.getMessage().substring(17) + " РІ С‡РёСЃР»Рѕ!");
+            throw new NumberFormatException("Невозможно строку "+e.getMessage().substring(17) + " в число!");
         }
 
         students.add(new Student(fio, avgI, groupI, ageI));
